@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+
+<SimBase.Document Type="Checklist" version="1,0">
+	<Checklist.Checklist>
+		
+		<IncludeCheckpointLibrary FileName="CheckpointsLibrary\\Asobo_DefaultCheckpointLibrary.xml"/>
+
+		<Step ChecklistStepId="PREFLIGHT_GATE">
+			
+			<Page SubjectTT="TT:GAME.CHECKLIST_PREFLIGHT_INSPECTION_COCKPIT_1">
+				<Checkpoint ReferenceId="Parking_Brake_Set"/>
+			</Page>
+			
+		</Step>
+		
+		<Step ChecklistStepId="PREFLIGHT_TAXI_OUT">
+		</Step>
+		
+		<Step ChecklistStepId="FLIGHT_RUNWAY">
+		</Step>
+		
+	</Checklist.Checklist>
+</SimBase.Document>
