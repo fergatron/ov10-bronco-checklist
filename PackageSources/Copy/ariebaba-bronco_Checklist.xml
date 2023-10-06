@@ -4,30 +4,14 @@
 	<Checklist.Checklist>
 		
 		<IncludeCheckpointLibrary FileName="CheckpointsLibrary\\Asobo_DefaultCheckpointLibrary.xml"/>
+		<IncludeCheckpointLibrary FileName="SimObjects\\Airplanes\\ariebaba-bronco\\Checklist\\ariebaba-bronco_Library.xml"/>
 
 		<Step ChecklistStepId="PREFLIGHT_GATE">
 			
 			<Page SubjectTT="TT:GAME.CHECKLIST_PREFLIGHT_INSPECTION_COCKPIT_1">
-				<Checkpoint ReferenceId="Parking_Brake_Set"/>
+				<Checkpoint ReferenceId="bronco_Battery_Off"/>
 			</Page>
 			
-		</Step>
-		
-		<Step ChecklistStepId="TT:Before Taxiing">
-			<Page SubjectTT="TT:Before Taxi">
-				<Checkpoint Id="Test Parking Brake">
-					<Clue name="TT:Secure stored items"/>
-					<CheckpointDesc SubjectTT="TT:Baggage Area" ExpectationTT="TT:Secure"/>
-					<Test>
-						<TestValue>
-							<Val Value="1"/>
-						</TestValue>
-					</Test>
-				</Checkpoint>
-			</Page>
-		</Step>
-		
-		<Step ChecklistStepId="FLIGHT_RUNWAY">
 		</Step>
 		
 	</Checklist.Checklist>

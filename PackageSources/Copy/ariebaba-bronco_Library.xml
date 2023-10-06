@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<SimBase.Document Type="CheckpointLibrary" version="1,0">
+	<Checklist.CheckpointLibrary>
+
+        <Checkpoint Id="bronco_Battery_Off">
+			<Clue name="TT:OFF"/>
+			<CheckpointDesc SubjectTT="TT:Battery" ExpectationTT="TT:Off"/>
+			<Test>
+				<TestValue>
+					<Val Value="0"/>
+				</TestValue>
+			</Test>
+		</Checkpoint>
+
+    </Checklist.CheckpointLibrary>
+</SimBase.Document>
