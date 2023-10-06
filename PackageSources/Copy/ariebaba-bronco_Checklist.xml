@@ -13,7 +13,18 @@
 			
 		</Step>
 		
-		<Step ChecklistStepId="PREFLIGHT_TAXI_OUT">
+		<Step ChecklistStepId="TT:Before Taxiing">
+			<Page SubjectTT="TT:Before Taxi">
+				<Checkpoint Id="Test Parking Brake">
+					<Clue name="TT:Secure stored items"/>
+					<CheckpointDesc SubjectTT="TT:Baggage Area" ExpectationTT="TT:Secure"/>
+					<Test>
+						<TestValue>
+							<Val Value="1"/>
+						</TestValue>
+					</Test>
+				</Checkpoint>
+			</Page>
 		</Step>
 		
 		<Step ChecklistStepId="FLIGHT_RUNWAY">

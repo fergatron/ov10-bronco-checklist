@@ -20,3 +20,6 @@ Because I'm simply making a single XML file for the checklist I went with "Copy"
 
 1. https://docs.flightsimulator.com/html/Content_Configuration/Checklists/Checklists.htm
 1. https://docs.flightsimulator.com/html/Developer_Mode/Project_Editor/The_Project_Editor.htm#NewProject
+1. https://forums.flightsimulator.com/t/guide-aircraft-checklists/306098
+1. https://www.youtube.com/watch?v=X3qyyGDRUus
+1. https://docs.flightsimulator.com/html/mergedProjects/How_To_Make_An_Aircraft/Contents/Files/Checklists/Checklist_Best_Practices.htm?agt=index

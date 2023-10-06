@@ -16,8 +16,8 @@
 			<Flags>
 				<FSXCompatibility>false</FSXCompatibility>
 			</Flags>
-			<AssetDir>PackageDefinitions\tabletopandroid-ov10-checklist\ContentInfo</AssetDir>
-			<OutputDir>ContentInfo\tabletopandroid-ov10-checklist</OutputDir>
+			<AssetDir>PackageDefinitions\tabletopandroid-ov10-checklist\ContentInfo\</AssetDir>
+			<OutputDir>ContentInfo\tabletopandroid-ov10-checklist\</OutputDir>
 		</AssetGroup>
 		<AssetGroup Name="OV10_Bronco_Checklist">
 			<Type>Copy</Type>
