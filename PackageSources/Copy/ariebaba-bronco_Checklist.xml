@@ -8,7 +8,10 @@
 
 		<Step ChecklistStepId="PREFLIGHT_GATE">
 			
-			<Page SubjectTT="TT:GAME.CHECKLIST_PREFLIGHT_INSPECTION_COCKPIT_1">
+			<Page SubjectTT="Preflight Checklist">
+				<Checkpoint ReferenceId="bronco_Battery_On"/>
+				<Checkpoint ReferenceId="bronco_Inst_Pwr_Switch_1"/>
+				<Checkpoint ReferenceId="bronco_Fuel_Qty_Check"/>
 				<Checkpoint ReferenceId="bronco_Battery_Off"/>
 			</Page>
 			

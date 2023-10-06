@@ -3,11 +3,41 @@
 	<Checklist.CheckpointLibrary>
 
         <Checkpoint Id="bronco_Battery_Off">
-			<Clue name="TT:OFF"/>
-			<CheckpointDesc SubjectTT="TT:Battery" ExpectationTT="TT:Off"/>
+			<Clue name="Turn Battery OFF"/>
+			<CheckpointDesc SubjectTT="Battery" ExpectationTT="Off"/>
 			<Test>
 				<TestValue>
 					<Val Value="0"/>
+				</TestValue>
+			</Test>
+		</Checkpoint>
+
+        <Checkpoint Id="bronco_Battery_On">
+			<Clue name="Turn Battery ON"/>
+			<CheckpointDesc SubjectTT="Battery" ExpectationTT="On"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+		</Checkpoint>
+
+        <Checkpoint Id="bronco_Fuel_Qty_Check">
+			<Clue name="Verify fuel quantity is what you think it is"/>
+			<CheckpointDesc SubjectTT="Fuel Quantity" ExpectationTT="Check"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+		</Checkpoint>
+
+        <Checkpoint Id="bronco_Inst_Pwr_Switch_1">
+			<Clue name="Choose Avionics Inv No 1"/>
+			<CheckpointDesc SubjectTT="INST PWR Switch" ExpectationTT="INV NO. 1"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
 				</TestValue>
 			</Test>
 		</Checkpoint>
