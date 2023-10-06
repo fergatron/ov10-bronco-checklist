@@ -4,17 +4,21 @@ The purpose of this project is to establish a decent set of checklist items in t
 
 ## Install
 
-Open the project in "Developer Mode" in MSFS. Build the project. It will produce a "Packages/" directory in the root of the project. The contents of that directory can by moved to your "Community/" directory.
+Open the project in "Developer Mode" in MSFS. Build the project. It will produce a `Packages/` directory in the root of the project. The contents of that directory can be moved to your `Community/` directory.
 
 ## SDK Development
 
-I found it very confusing trying to create this project. Here's what I discovered through this journey. The `PackageSources/` directory in your project is where you manually add "Asset Groups". In order for the compiler to see it and output it, it needs to be defined in `PackageDefinitions/[project-name].xml`.
+I found it very confusing trying to create this project. Here's what I discovered through this journey. The `PackageSources/` directory in your root project is where you **MANUALLY** add "Asset Groups". In order for the compiler to see it and output it, it needs to be defined in `PackageDefinitions/[project-name].xml`.
 
-> Note: Any changes made to the asset definition in Developer Mode will overwrite the .xml file. So; make all your changes in the Developer UI.
+> Note: Any changes made to the asset definition in Developer Mode will overwrite the .xml file. Keep that in mind as you use text editors and the UI from developer mode.
 
 ### Asset Type
 
 Because I'm simply making a single XML file for the checklist I went with "Copy" as the asset type. I made sure to have the output follow the pattern as if I created a full aircraft (SimObjects\Airplanes\ariebaba-bronco\Checklist\).
+
+## Flight Simulator Freelance Society
+
+Shout out to [FS2](https://forums.flightsimulator.com/t/fs-flight-simulator-freelance-society/422849). This Discord community helped me out when I was completely lost with out development worked. Very patient and very helpful.
 
 ## References
 
@@ -23,3 +27,4 @@ Because I'm simply making a single XML file for the checklist I went with "Copy"
 1. https://forums.flightsimulator.com/t/guide-aircraft-checklists/306098
 1. https://www.youtube.com/watch?v=X3qyyGDRUus
 1. https://docs.flightsimulator.com/html/mergedProjects/How_To_Make_An_Aircraft/Contents/Files/Checklists/Checklist_Best_Practices.htm?agt=index
+1. https://forums.flightsimulator.com/t/fs-flight-simulator-freelance-society/422849
