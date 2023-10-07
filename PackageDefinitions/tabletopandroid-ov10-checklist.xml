@@ -24,8 +24,16 @@
 			<Flags>
 				<FSXCompatibility>false</FSXCompatibility>
 			</Flags>
-			<AssetDir>PackageSources\Copy\</AssetDir>
+			<AssetDir>PackageSources\Checklist\</AssetDir>
 			<OutputDir>SimObjects\Airplanes\ariebaba-bronco\Checklist\</OutputDir>
+		</AssetGroup>
+		<AssetGroup Name="OV10_Bronco_Manual">
+			<Type>Copy</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageSources\Manual\</AssetDir>
+			<OutputDir>Manual\</OutputDir>
 		</AssetGroup>
 	</AssetGroups>
 </AssetPackage>
