@@ -23,6 +23,7 @@ Because I'm simply making a single XML file for the checklist I went with "Copy"
 - The checklist UI will not display your changes after a build. `Esc > Restart > Continue` will load your changes.
 - The `Page` element must have at least one valid `Checkpoint` element in order to be displayed.
 - The `Clue` element cannot have an empty `name` attribute. It will crash the game.
+- If you expand the Checklist as a separate window. There is a higher chance of the game crashing.
 
 ### Definitions
 

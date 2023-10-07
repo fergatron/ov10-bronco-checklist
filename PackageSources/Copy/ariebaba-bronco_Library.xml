@@ -44,6 +44,7 @@
 				</TestValue>
 			</Test>
 			<ForceCamera name="Instruments04"/>
+			<Instrument Id="ELECTRICAL_Switch_Battery_Master"/>
 		</Checkpoint>
 
         <Checkpoint Id="bronco_Battery_On">
@@ -55,6 +56,7 @@
 				</TestValue>
 			</Test>
 			<ForceCamera name="Instruments04"/>
+			<Instrument Id="ELECTRICAL_Switch_Battery_Master"/>
 		</Checkpoint>
 
 		<Checkpoint Id="bronco_Battery_Switch_On">
@@ -66,6 +68,7 @@
 				</TestValue>
 			</Test>
 			<ForceCamera name="Instruments04"/>
+			<Instrument Id="ELECTRICAL_Switch_Battery_Master"/>
 		</Checkpoint>
 
 		<Checkpoint Id="bronco_Clock_Set">
@@ -160,6 +163,10 @@
 			<Clue name="Set Strobe, Form, or Wing &amp; Tail switches as desired"/>
 			<CheckpointDesc SubjectTT="EX LIGHTS switch" ExpectationTT="AS DESIRED"/>
 			<ForceCamera name="Instruments06"/>
+			<Instrument Id="LIGHTING_Switch_Light_Landing"/>
+			<Instrument Id="LIGHTING_Switch_Light_Navigation"/>
+			<Instrument Id="LIGHTING_Switch_Light_Strobe"/>
+			<Instrument Id="LIGHTING_Switch_Light_Taxi"/>
 		</Checkpoint>
 
 		<Checkpoint Id="bronco_Ext_Power_Disconnect">
@@ -182,6 +189,7 @@
 				</TestValue>
 			</Test>
 			<ForceCamera name="Instruments06"/>
+			<Instrument Id="FUEL_Switch_Cutoff"/>
 		</Checkpoint>
 
 		<Checkpoint Id="bronco_Fire_Det_Warn_Lights_Test">
@@ -193,6 +201,8 @@
 				</TestValue>
 			</Test>
 			<ForceCamera name="ClosePilot"/>
+			<Instrument Id="SAFETY_PUSH_TEST"/>
+			<Instrument Id="INSTRUMENT_Annunciators"/>
 		</Checkpoint>
 
 		<Checkpoint Id="bronco_Flap_Handle_Up">
@@ -227,6 +237,7 @@
 				</TestValue>
 			</Test>
 			<ForceCamera name="Instruments02"/>
+			<Instrument Id="INSTRUMENT_Needle_Fuel_Quantity"/>
 		</Checkpoint>
 
 		<Checkpoint Id="bronco_Generator_Switches_Off">
@@ -283,6 +294,10 @@
 			<Clue name="Monitor rpm, oil pressure, EGT, and observe START IGN ON light and BOOST PUMP light out at approximately 52% rpm"/>
 			<CheckpointDesc SubjectTT="Monitor instruments" ExpectationTT="MONITOR"/>
 			<ForceCamera name="Instruments02"/>
+			<Instrument Id="INSTRUMENT_Digits_Tachometer"/>
+			<Instrument Id="INSTRUMENT_Needle_Oil_Temperature"/>
+			<Instrument Id="INSTRUMENT_Needle_Oil_Pressure"/>
+			<Instrument Id="INSTRUMENT_Needle_CoolantTemperature"/>
 		</Checkpoint>
 
 		<Checkpoint Id="bronco_Parking_Brake_Set">
@@ -294,6 +309,7 @@
 				</TestValue>
 			</Test>
 			<ForceCamera name="ClosePilot"/>
+			<Instrument Id="LANDING_GEAR_Switch_ParkingBrake"/>
 		</Checkpoint>
 
 		<Checkpoint Id="bronco_Power_Lever_Minimum">
@@ -305,6 +321,8 @@
 				</TestValue>
 			</Test>
 			<ForceCamera name="Instruments04"/>
+			<Instrument Id="ENGINE_Lever_Throttle"/>
+			<Instrument Id="INSTRUMENT_Digits_Tachometer"/>
 		</Checkpoint>
 
 		<Checkpoint Id="bronco_Power_Lever_Reverse">
@@ -316,6 +334,7 @@
 				</TestValue>
 			</Test>
 			<ForceCamera name="Instruments04"/>
+			<Instrument Id="ENGINE_Lever_Throttle"/>
 		</Checkpoint>
 
 		<Checkpoint Id="bronco_Power_Lever_Ground">
@@ -327,6 +346,7 @@
 				</TestValue>
 			</Test>
 			<ForceCamera name="Instruments04"/>
+			<Instrument Id="ENGINE_Lever_Throttle"/>
 		</Checkpoint>
 
 		<Checkpoint Id="bronco_Power_Levers_Ground">
@@ -338,6 +358,7 @@
 				</TestValue>
 			</Test>
 			<ForceCamera name="Instruments04"/>
+			<Instrument Id="ENGINE_Lever_Throttle"/>
 		</Checkpoint>
 
 		<Checkpoint Id="bronco_Pitot_Heat_Switch_Off">
