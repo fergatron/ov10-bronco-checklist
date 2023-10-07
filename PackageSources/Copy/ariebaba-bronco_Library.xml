@@ -2,44 +2,414 @@
 <SimBase.Document Type="CheckpointLibrary" version="1,0">
 	<Checklist.CheckpointLibrary>
 
+		<Checkpoint Id="bronco_Air_Start_Switch_Crank">
+			<Clue name="Hold in CRANK until blades reach full reverse, then release to AUTO"/>
+			<CheckpointDesc SubjectTT="AIR START switch" ExpectationTT="CRANK"/>
+			<Test>
+				<TestValue>
+					<Val Value="0"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments04"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Air_Start_Switches_Auto">
+			<Clue name='Set Air Start Switches to "AUTO"'/>
+			<CheckpointDesc SubjectTT="AIR START switches" ExpectationTT="AUTO"/>
+			<Test>
+				<TestValue>
+					<Val Value="0"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments04"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Anti_Collision_Switch_On">
+			<Clue name='Set Anti Collision switch to "ON"'/>
+			<CheckpointDesc SubjectTT="ANTI COLLISION switch" ExpectationTT="ON"/>
+			<Test>
+				<TestValue>
+					<Val Value="0"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments06"/>
+		</Checkpoint>
+
         <Checkpoint Id="bronco_Battery_Off">
-			<Clue name="Turn Battery OFF"/>
+			<Clue name="Battery must be Off"/>
 			<CheckpointDesc SubjectTT="Battery" ExpectationTT="Off"/>
 			<Test>
 				<TestValue>
 					<Val Value="0"/>
 				</TestValue>
 			</Test>
+			<ForceCamera name="Instruments04"/>
 		</Checkpoint>
 
         <Checkpoint Id="bronco_Battery_On">
-			<Clue name="Turn Battery ON"/>
+			<Clue name="Battery must be On"/>
 			<CheckpointDesc SubjectTT="Battery" ExpectationTT="On"/>
 			<Test>
 				<TestValue>
 					<Val Value="1"/>
 				</TestValue>
 			</Test>
+			<ForceCamera name="Instruments04"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Battery_Switch_On">
+			<Clue name="Battery must be On; check voltage"/>
+			<CheckpointDesc SubjectTT="BATTERY switch" ExpectationTT="ON"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments04"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Clock_Set">
+			<Clue name="Adjust clock to desired setting"/>
+			<CheckpointDesc SubjectTT="Clock" ExpectationTT="SET"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments03"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Compass_Slaved">
+			<Clue name='Set Compass Switch to "SYNC"'/>
+			<CheckpointDesc SubjectTT="COMPASS" ExpectationTT="SLAVED"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments05"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Compute_Tempurature_Torque_Limits">
+			<Clue name="Compute temperature and torque limits"/>
+			<CheckpointDesc SubjectTT="Temperature and Torque limits" ExpectationTT="Compute"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments02"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Condition_Lever_Normal">
+			<Clue name="Observe EGT rise at 10% to 12% RPM"/>
+			<CheckpointDesc SubjectTT="Condition lever" ExpectationTT="NORMAL FLIGHT ON PROP ROTATION"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments04"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Condition_Lever_Shut_Off">
+			<Clue name='Set Condition Lever to "FUEL SHUT-OFF"'/>
+			<CheckpointDesc SubjectTT="Condition lever" ExpectationTT="FUEL SHUT-OFF"/>
+			<Test>
+				<TestValue>
+					<Val Value="0"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments04"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Condition_Levers_Shut_Off">
+			<Clue name='Set Condition Levers to "FEATHER &amp; FUEL SHUT-OFF"'/>
+			<CheckpointDesc SubjectTT="Condition levers" ExpectationTT="FUEL SHUT-OFF"/>
+			<Test>
+				<TestValue>
+					<Val Value="0"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments04"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Ext_Fuel_Trans_Switches">
+			<Clue name='Set External Fuel Transfer switches to "OFF"'/>
+			<CheckpointDesc SubjectTT="EXT FUEL TRANS switches" ExpectationTT="OFF"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments06"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Ext_Lts">
+			<Clue name='Set Exterior Lights Master Switch to "EXT LTS"'/>
+			<CheckpointDesc SubjectTT="EXT LTS MASER switch" ExpectationTT="EXT LTS"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments05"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Ext_Lts_Desired">
+			<Clue name="Set Strobe, Form, or Wing &amp; Tail switches as desired"/>
+			<CheckpointDesc SubjectTT="EX LIGHTS switch" ExpectationTT="AS DESIRED"/>
+			<ForceCamera name="Instruments06"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Ext_Power_Disconnect">
+			<Clue name="Check GEN and BOOST PUMP lights out"/>
+			<CheckpointDesc SubjectTT="External power" ExpectationTT="DISCONNECT, if applicable"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments06"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Fuel_Emerg_Shut_Off_Switches">
+			<Clue name='Set Fuel Emergency Shut Off switches to "NORM"'/>
+			<CheckpointDesc SubjectTT="FUEL EMERG SHUT OFF switches" ExpectationTT="NORM"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments06"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Fire_Det_Warn_Lights_Test">
+			<Clue name="Hold the FIRE DET/WARN LTS switch to test Warning and Caution lights"/>
+			<CheckpointDesc SubjectTT="FIRE DET/WARN LTS" ExpectationTT="TEST"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="ClosePilot"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Flap_Handle_Up">
+			<Clue name="Flap handle must be UP"/>
+			<CheckpointDesc SubjectTT="FLAP handle" ExpectationTT="UP"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<Instrument Id="HANDLING_Lever_Flaps"/>
+			<ForceCamera name="Instruments05"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Fuel_Gage_Sel_Switch_Int">
+			<Clue name='Set Fuel Gage Select switch to "INT"'/>
+			<CheckpointDesc SubjectTT="Fuel GAGE SEL switch" ExpectationTT="INT"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments06"/>
 		</Checkpoint>
 
         <Checkpoint Id="bronco_Fuel_Qty_Check">
-			<Clue name="Verify fuel quantity is what you think it is"/>
+			<Clue name="Verify fuel quantity"/>
 			<CheckpointDesc SubjectTT="Fuel Quantity" ExpectationTT="Check"/>
 			<Test>
 				<TestValue>
 					<Val Value="1"/>
 				</TestValue>
 			</Test>
+			<ForceCamera name="Instruments02"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Generator_Switches_Off">
+			<Clue name='Set L GEN and R GEN Switches to "OFF"'/>
+			<CheckpointDesc SubjectTT="Generator switches" ExpectationTT="OFF"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments04"/>
 		</Checkpoint>
 
         <Checkpoint Id="bronco_Inst_Pwr_Switch_1">
-			<Clue name="Choose Avionics Inv No 1"/>
+			<Clue name='Set Instrument Power Switch to "INV NO. 1"'/>
 			<CheckpointDesc SubjectTT="INST PWR Switch" ExpectationTT="INV NO. 1"/>
 			<Test>
 				<TestValue>
 					<Val Value="1"/>
 				</TestValue>
 			</Test>
+			<ForceCamera name="Instruments04"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Inst_Pwr_Switch_Lights_1">
+			<Clue name="Check GEN, BOOST PUMP lights out (battery start only)"/>
+			<CheckpointDesc SubjectTT="INST PWR switch" ExpectationTT="INV NO. 1"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments04"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Inst_Pwr_Switch_Off">
+			<Clue name='Set Instrument Power Switch to "OFF"'/>
+			<CheckpointDesc SubjectTT="INST PWR Switch" ExpectationTT="OFF"/>
+			<Test>
+				<TestValue>
+					<Val Value="0"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments04"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Interior_Lights_Desired">
+			<Clue name="Set Consoles, Instruments dials, Flood and High Intensity switches as desired"/>
+			<CheckpointDesc SubjectTT="Interior lights" ExpectationTT="AS DESIRED"/>
+			<ForceCamera name="Instruments07"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Monitor_Instruments">
+			<Clue name="Monitor rpm, oil pressure, EGT, and observe START IGN ON light and BOOST PUMP light out at approximately 52% rpm"/>
+			<CheckpointDesc SubjectTT="Monitor instruments" ExpectationTT="MONITOR"/>
+			<ForceCamera name="Instruments02"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Parking_Brake_Set">
+			<Clue name="Parking brake must be set"/>
+			<CheckpointDesc SubjectTT="Parking brake" ExpectationTT="SET"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="ClosePilot"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Power_Lever_Minimum">
+			<Clue name="Set Power Lever to minimum specs"/>
+			<CheckpointDesc SubjectTT="Power lever" ExpectationTT="Minimum RPM (65%)"/>
+			<Test>
+				<TestValue>
+					<Val Value="0"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments04"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Power_Lever_Reverse">
+			<Clue name='Set Power Lever to "FULL REVERSE"'/>
+			<CheckpointDesc SubjectTT="Power lever" ExpectationTT="FULL REVERSE"/>
+			<Test>
+				<TestValue>
+					<Val Value="0"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments04"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Power_Lever_Ground">
+			<Clue name='Set Power Lever to "GROUND IDLE"'/>
+			<CheckpointDesc SubjectTT="Power lever" ExpectationTT="GROUND IDLE"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments04"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Power_Levers_Ground">
+			<Clue name='Set Power Levers to  "GROUND IDLE"'/>
+			<CheckpointDesc SubjectTT="Power levers" ExpectationTT="GROUND IDLE"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments04"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Pitot_Heat_Switch_Off">
+			<Clue name='Set Pitot Heat Switch to "OFF"'/>
+			<CheckpointDesc SubjectTT="PITOT HEAT switch" ExpectationTT="OFF"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments06"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Propeller_Clear">
+			<Clue name="Make sure the area surrounding the Propellers is clear"/>
+			<CheckpointDesc SubjectTT="Propeller" ExpectationTT="Clear"/>
+			<ForceCamera name="QuickView8_R3"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Radar_Altimeter_Off">
+			<Clue name="Radar Altimeter must be Off"/>
+			<CheckpointDesc SubjectTT="Radar Altimeter" ExpectationTT="Off"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments01"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Radios_On">
+			<Clue name="Radios must be On"/>
+			<CheckpointDesc SubjectTT="Radios" ExpectationTT="On"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments03"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Start_Switch_Abort">
+			<Clue name='Set Start Switch to "ABORT"'/>
+			<CheckpointDesc SubjectTT="START switch" ExpectationTT="ABORT"/>
+			<Test>
+				<TestValue>
+					<Val Value="2"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments04"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Start_Switch_Start">
+			<Clue name="Hold desired START switch momentarily in START and check the START IGN ON light"/>
+			<CheckpointDesc SubjectTT="START switch" ExpectationTT="START"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments04"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Windshield_Wiper_Switch_Off">
+			<Clue name='Set Windshield Wiper Switch to "OFF"'/>
+			<CheckpointDesc SubjectTT="Windshield WIPER switch" ExpectationTT="OFF"/>
+			<Test>
+				<TestValue>
+					<Val Value="0"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments06"/>
 		</Checkpoint>
 
     </Checklist.CheckpointLibrary>

@@ -8,13 +8,92 @@
 
 		<Step ChecklistStepId="PREFLIGHT_GATE">
 			
-			<Page SubjectTT="Preflight Checklist">
+			<Page SubjectTT="Pre-flight Checklist">
 				<Checkpoint ReferenceId="bronco_Battery_On"/>
 				<Checkpoint ReferenceId="bronco_Inst_Pwr_Switch_1"/>
 				<Checkpoint ReferenceId="bronco_Fuel_Qty_Check"/>
+				<Checkpoint ReferenceId="bronco_Inst_Pwr_Switch_Off"/>
 				<Checkpoint ReferenceId="bronco_Battery_Off"/>
 			</Page>
+
+			<Page SubjectTT="Cockpit Check">
+				<Checkpoint ReferenceId="bronco_Flap_Handle_Up"/>
+				<Checkpoint ReferenceId="bronco_Ext_Lts"/>
+				<Checkpoint ReferenceId="bronco_Power_Levers_Ground"/>
+				<Checkpoint ReferenceId="bronco_Condition_Levers_Shut_Off"/>
+				<Checkpoint ReferenceId="bronco_Battery_Off"/>
+				<Checkpoint ReferenceId="bronco_Generator_Switches_Off"/>
+				<Checkpoint ReferenceId="bronco_Inst_Pwr_Switch_Off"/>
+				<Checkpoint ReferenceId="bronco_Air_Start_Switches_Auto"/>
+				<Checkpoint ReferenceId="bronco_Clock_Set"/>
+				<Checkpoint ReferenceId="bronco_Radar_Altimeter_Off"/>
+				<Checkpoint ReferenceId="bronco_Fuel_Gage_Sel_Switch_Int"/>
+				<Checkpoint ReferenceId="bronco_Ext_Fuel_Trans_Switches"/>
+				<Checkpoint ReferenceId="bronco_Fuel_Emerg_Shut_Off_Switches"/>
+				<Checkpoint ReferenceId="bronco_Pitot_Heat_Switch_Off"/>
+				<Checkpoint ReferenceId="bronco_Windshield_Wiper_Switch_Off"/>
+				<Checkpoint ReferenceId="bronco_Anti_Collision_Switch_On"/>
+				<Checkpoint ReferenceId="bronco_Ext_Lts_Desired"/>
+				<Checkpoint ReferenceId="bronco_Compass_Slaved"/>
+				<Checkpoint ReferenceId="bronco_Interior_Lights_Desired"/>
+			</Page>
+
+			<Page SubjectTT="Before Start">
+				<Checkpoint ReferenceId="bronco_Parking_Brake_Set"/>
+				<Checkpoint ReferenceId="bronco_Propeller_Clear"/>
+				<Checkpoint ReferenceId="bronco_Battery_Switch_On"/>
+				<Checkpoint ReferenceId="bronco_Fire_Det_Warn_Lights_Test"/>
+			</Page>
+
+			<Page SubjectTT="Unfeathered (If Required)">
+				<Block SubjectTT="Perform checks for right engine">
+					<Checkpoint ReferenceId="bronco_Condition_Lever_Shut_Off"/>
+					<Checkpoint ReferenceId="bronco_Power_Lever_Reverse"/>
+					<Checkpoint ReferenceId="bronco_Air_Start_Switch_Crank"/>
+					<Checkpoint ReferenceId="bronco_Power_Lever_Ground"/>
+				</Block>
+
+				<Block SubjectTT="Perform checks for left engine">
+					<Checkpoint ReferenceId="bronco_Condition_Lever_Shut_Off"/>
+					<Checkpoint ReferenceId="bronco_Power_Lever_Reverse"/>
+					<Checkpoint ReferenceId="bronco_Air_Start_Switch_Crank"/>
+					<Checkpoint ReferenceId="bronco_Power_Lever_Ground"/>
+				</Block>
+			</Page>
 			
+		</Step>
+
+		<Step ChecklistStepId="PREFLIGHT_PUSHBACK">
+
+			<Page SubjectTT="Starting Engines">
+				<Block SubjectTT="Perform checks for right engine">
+					<Checkpoint ReferenceId="bronco_Start_Switch_Start"/>
+					<Checkpoint ReferenceId="bronco_Condition_Lever_Normal"/>
+					<Checkpoint ReferenceId="bronco_Monitor_Instruments"/>
+					<Checkpoint ReferenceId="bronco_Power_Lever_Minimum"/>
+					<Checkpoint ReferenceId="bronco_Inst_Pwr_Switch_Lights_1"/>
+					<Checkpoint ReferenceId="bronco_Radios_On"/>
+					<Checkpoint ReferenceId="bronco_Ext_Power_Disconnect"/>
+					<Checkpoint ReferenceId="bronco_Compute_Tempurature_Torque_Limits"/>
+				</Block>
+
+				<Block SubjectTT="Perform checks for left engine">
+					<Checkpoint ReferenceId="bronco_Start_Switch_Start"/>
+					<Checkpoint ReferenceId="bronco_Condition_Lever_Normal"/>
+					<Checkpoint ReferenceId="bronco_Monitor_Instruments"/>
+					<Checkpoint ReferenceId="bronco_Power_Lever_Minimum"/>
+					<Checkpoint ReferenceId="bronco_Inst_Pwr_Switch_Lights_1"/>
+					<Checkpoint ReferenceId="bronco_Radios_On"/>
+					<Checkpoint ReferenceId="bronco_Ext_Power_Disconnect"/>
+					<Checkpoint ReferenceId="bronco_Compute_Tempurature_Torque_Limits"/>
+				</Block>
+			</Page>
+
+			<Page SubjectTT="Aborted/Hung Start">
+				<Checkpoint ReferenceId="bronco_Condition_Lever_Shut_Off"/>
+				<Checkpoint ReferenceId="bronco_Start_Switch_Abort"/>
+			</Page>
+
 		</Step>
 		
 	</Checklist.Checklist>

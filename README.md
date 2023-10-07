@@ -6,6 +6,8 @@ The purpose of this project is to establish a decent set of checklist items in t
 
 Open the project in "Developer Mode" in MSFS. Build the project. It will produce a `Packages/` directory in the root of the project. The contents of that directory can be moved to your `Community/` directory.
 
+> If you just want the ouput get it from [Flightsim.to](https://flightsim.to/profile/tabletopANDROID).
+
 ## SDK Development
 
 I found it very confusing trying to create this project. Here's what I discovered through this journey. The `PackageSources/` directory in your root project is where you **MANUALLY** add "Asset Groups". In order for the compiler to see it and output it, it needs to be defined in `PackageDefinitions/[project-name].xml`.
@@ -15,6 +17,17 @@ I found it very confusing trying to create this project. Here's what I discovere
 ### Asset Type
 
 Because I'm simply making a single XML file for the checklist I went with "Copy" as the asset type. I made sure to have the output follow the pattern as if I created a full aircraft (SimObjects\Airplanes\ariebaba-bronco\Checklist\).
+
+### Observations
+
+- The checklist UI will not display your changes after a build. `Esc > Restart > Continue` will load your changes.
+- The `Page` element must have at least one valid `Checkpoint` element in order to be displayed.
+- The `Clue` element cannot have an empty `name` attribute. It will crash the game.
+
+### Definitions
+
+- cameras.cfg
+- Asobo_DefaultCheckpointLibrary.xml - <Instrument/> ID's
 
 ## Flight Simulator Freelance Society
 
