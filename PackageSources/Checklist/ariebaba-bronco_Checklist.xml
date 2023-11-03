@@ -95,6 +95,21 @@
 			</Page>
 
 		</Step>
+
+		<Step ChecklistStepId="LANDING_GATE">
+
+			<Page SubjectTT="Before Leaving Aircraft">
+				<Checkpoint ReferenceId="bronco_Wheel_Chocks"/>
+				<Checkpoint ReferenceId="bronco_Parking_Brake_Set"/>
+				<Checkpoint ReferenceId="bronco_Oxygen_Diluter_Lever"/>
+				<Checkpoint ReferenceId="bronco_Control_Gust_Lock"/>
+				<Checkpoint ReferenceId="bronco_Safety_Pins_Parachute_Thruster"/>
+				<Checkpoint ReferenceId="bronco_Safety_Pins_Landing_Gear"/>
+				<Checkpoint ReferenceId="bronco_Engine_Oil_Quantity"/>
+				<Checkpoint ReferenceId="bronco_Laser_Safety_Plug"/>
+			</Page>
+			
+		</Step>
 		
 	</Checklist.Checklist>
 </SimBase.Document>

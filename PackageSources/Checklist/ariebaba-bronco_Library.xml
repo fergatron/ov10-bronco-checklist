@@ -137,6 +137,28 @@
 			<ForceCamera name="Instruments04"/>
 		</Checkpoint>
 
+		<Checkpoint Id="bronco_Control_Gust_Lock">
+			<Clue name="Install the control gust lock"/>
+			<CheckpointDesc SubjectTT="Control gust lock" ExpectationTT="INSTALL"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments01"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Engine_Oil_Quantity">
+			<Clue name="Check the engine oil quantity"/>
+			<CheckpointDesc SubjectTT="Engine oil quantity" ExpectationTT="CHECK"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments02"/>
+		</Checkpoint>
+
 		<Checkpoint Id="bronco_Ext_Fuel_Trans_Switches">
 			<Clue name='Set External Fuel Transfer switches to "OFF"'/>
 			<CheckpointDesc SubjectTT="EXT FUEL TRANS switches" ExpectationTT="OFF"/>
@@ -290,6 +312,12 @@
 			<ForceCamera name="Instruments07"/>
 		</Checkpoint>
 
+		<Checkpoint Id="bronco_Laser_Safety_Plug">
+			<Clue name="Check that the LASER safety plug is removed"/>
+			<CheckpointDesc SubjectTT="LASER safety plug removed" ExpectationTT="CHECK"/>
+			<ForceCamera name="Instruments07"/>
+		</Checkpoint>
+
 		<Checkpoint Id="bronco_Monitor_Instruments">
 			<Clue name="Monitor rpm, oil pressure, EGT, and observe START IGN ON light and BOOST PUMP light out at approximately 52% rpm"/>
 			<CheckpointDesc SubjectTT="Monitor instruments" ExpectationTT="MONITOR"/>
@@ -298,6 +326,17 @@
 			<Instrument Id="INSTRUMENT_Needle_Oil_Temperature"/>
 			<Instrument Id="INSTRUMENT_Needle_Oil_Pressure"/>
 			<Instrument Id="INSTRUMENT_Needle_CoolantTemperature"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Oxygen_Diluter_Lever">
+			<Clue name='Set Oxygen diluter lever to "OFF"'/>
+			<CheckpointDesc SubjectTT="Oxygen diluter lever - 100%" ExpectationTT="OFF (P, O)"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments01"/>
 		</Checkpoint>
 
 		<Checkpoint Id="bronco_Parking_Brake_Set">
@@ -400,6 +439,28 @@
 			<ForceCamera name="Instruments03"/>
 		</Checkpoint>
 
+		<Checkpoint Id="bronco_Safety_Pins_Landing_Gear">
+			<Clue name="Install safey pins for landing gear and drop tank"/>
+			<CheckpointDesc SubjectTT="Landing gear and drop tank safety pins" ExpectationTT="INSTALL"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments01"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Safety_Pins_Parachute_Thruster">
+			<Clue name="Install safey pins for parachute thurster"/>
+			<CheckpointDesc SubjectTT="Parachute thruster safety pin" ExpectationTT="INSTALLED (P,O)"/>
+			<Test>
+				<TestValue>
+					<Val Value="1"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="Instruments01"/>
+		</Checkpoint>
+
 		<Checkpoint Id="bronco_Start_Switch_Abort">
 			<Clue name='Set Start Switch to "ABORT"'/>
 			<CheckpointDesc SubjectTT="START switch" ExpectationTT="ABORT"/>
@@ -420,6 +481,17 @@
 				</TestValue>
 			</Test>
 			<ForceCamera name="Instruments04"/>
+		</Checkpoint>
+
+		<Checkpoint Id="bronco_Wheel_Chocks">
+			<Clue name="Make sure wheel chocks are in place"/>
+			<CheckpointDesc SubjectTT="Wheel chocks" ExpectationTT="IN PLACE"/>
+			<Test>
+				<TestValue>
+					<Val Value="0"/>
+				</TestValue>
+			</Test>
+			<ForceCamera name="FixedOnPlane_Belly"/>
 		</Checkpoint>
 
 		<Checkpoint Id="bronco_Windshield_Wiper_Switch_Off">
